@@ -32,6 +32,11 @@ const config = {
   i18n: {
     defaultLocale: 'vi',
     locales: ['vi'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'vi',
+      },
+    }
   },
 
   plugins: [
