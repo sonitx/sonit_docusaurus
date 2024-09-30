@@ -2,3 +2,8 @@ sonit.me:
   label: SonIT.me
   permalink: /sonit
   description: Những bài viết liên quan đến website của chúng tôi.
+
+apache_superset:
+  label: Apache Superset
+  permalink: /apache-superset
+  description: Hướng dẫn, kinh nghiệm xử lý các vấn đề liên quan đến Apache Superset.

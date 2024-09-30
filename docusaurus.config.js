@@ -59,7 +59,7 @@ const config = {
         docs: false,
         blog: {
           routeBasePath: '/',
-          showReadingTime: true,
+          showReadingTime: false,
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
