@@ -2,7 +2,7 @@
 slug: 2024-09-30-tim-hieu-ve-apache-superset
 title: Tìm hiểu về Apache Superset
 authors: [sonit]
-tags: [apache_superset]
+tags: [apache_superset, gemini]
 ---
 
 Khi làm ra một hệ thống, hoặc một ứng dụng. Ngoài vấn đề về vận hành, thì báo cáo (report) cũng là một phần rất quan trọng không thể thiếu của các ứng dụng. Dựa vào báo cáo, các cấp quản lý có thể biết tình hình kinh doanh hiện tại của công ty, cũng như phát hiện ra các vấn đề và kịp thời đưa ra giải pháp để đảm bảo lợi nhuận cho công ty.

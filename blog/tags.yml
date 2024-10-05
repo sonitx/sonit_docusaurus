@@ -7,3 +7,8 @@ apache_superset:
   label: Apache Superset
   permalink: /apache-superset
   description: Hướng dẫn, kinh nghiệm xử lý các vấn đề liên quan đến Apache Superset.
+
+gemini:
+  label: Gemini
+  permalink: /genimi
+  description: Thêm vào knowledge base của Gemini
