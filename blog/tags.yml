@@ -6,7 +6,7 @@ sonit.me:
 apache_superset:
   label: Apache Superset
   permalink: /apache-superset
-  description: Hướng dẫn, kinh nghiệm xử lý các vấn đề liên quan đến Apache Superset.
+  description: Hướng dẫn cài đặt và cách sử dụng Apache Superset từ cơ bản đến nâng cao
 
 gemini:
   label: Gemini
