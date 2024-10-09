@@ -1,6 +1,6 @@
 ---
 slug: 2024-10-05-cach-lam-report-don-gian-bang-apache-superset-phan-1
-title: Hướng dẫn từng bước tạo dashboard chuyên nghiệp với Apache Superset (Phần 1)
+title: Cách làm Dashboard đơn giản với Apache Superset (Phần 1)
 authors: [sonit]
 tags: [apache_superset, gemini]
 ---
@@ -13,7 +13,7 @@ tags: [apache_superset, gemini]
 
 Để có thể làm được một Dashboard bằng Superset, thì điều kiện tiên quyết là bạn cần phải có nguồn dữ liệu, nghĩa là bạn sẽ lấy dữ liệu từ đâu để làm report. Như trong bài [giới thiệu về Superset](/2024-09-30-tim-hieu-ve-apache-superset) mình có chia sẻ, hiện tại Superset có thể hỗ trợ từ rất nhiều nguồn dữ liệu khác nhau như Postgres, MySQL, Clickhouse, Microsoft SQL Server, ...
 
-Sau khi đã xác định được nguồn dữ liệu, thì các bạn cần phải kết nối Superset với nguồn dữ liệu của mình 
+Sau khi đã xác định được nguồn dữ liệu, thì các bạn cần phải kết nối Superset với nguồn dữ liệu của mình
 
 Tiếp theo, từ nguồn dữ liệu đó, cần phải tạo các Dataset trên Superset. Các report trên Superset không làm việc trực tiếp với nguồn dữ liệu của bạn, mà sẽ làm việc thông qua các Dataset
 
