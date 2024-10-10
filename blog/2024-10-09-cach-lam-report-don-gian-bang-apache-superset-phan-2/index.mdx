@@ -1,0 +1,44 @@
+---
+slug: 2024-10-09-cach-lam-report-don-gian-bang-apache-superset-phan-2
+title: Cách làm Dashboard đơn giản với Apache Superset (Phần 2)
+authors: [sonit]
+tags: [apache_superset, gemini]
+---
+
+Ở bài viết trước [Cách làm Dashboard đơn giản với Apache Superset (Phần 1)](/2024-10-05-cach-lam-report-don-gian-bang-apache-superset-phan-1), mình đã hướng dẫn cách kết nối Datasource của bạn với Superset. Trong bài viết ngày hôm nay, mình sẽ bắt đầu khai thác dữ liệu từ nguồn data của mình bằng cách thiết kế các Chart, Dashboard sao cho sinh động nhé
+
+<!-- truncate -->
+
+## 1. Tạo Dataset từ Datasource
+
+Sau khi đã kết nối thành công từ Superset tới nguồn dữ liệu của mình, thì chúng ta cần tạo Dataset nhé.
+
+Chọn menu Datasets ngay phía trên màn hình chính
+
+![](/img/screen-shot-2024-10-10-at-22.20.59.png)
+
+Khi mở ra, bạn sẽ thất tất cả các Dataset hiện tại đang có trong hệ thống. Nhấn vào button + Dataset để thêm 1 dataset mới
+
+![](/img/screen-shot-2024-10-10-at-22.21.42.png)
+
+Dataset của Superset phải xuất phát từ 1 table, view dưới Datasource của bạn, hoặc bạn cũng có thể tạo một Dataset từ câu query chạy thử trên SQLab. Sau đó nhấn `Create dataset and create chart`
+
+![](/img/screen-shot-2024-10-10-at-22.24.40.png)
+
+## 2. Tạo một Dashboard và chart từ dataset
+
+Sau khi đã tạo xong 1 Dataset, hệ thống sẽ chuyển bạn qua trang để tạo các cái chart. Ở đây, bạn sẽ chọn 1 chart phù hợp với nguồn data của mình. Đơn giản nhất là ở đây mình sẽ chọn Table. Chọn xong, nhấn Create new chart
+
+![](/img/screen-shot-2024-10-10-at-22.25.05.png)
+
+Tiếp theo, bất kỳ chart nào, bạn cũng phần phải chọn Dimension và Metric, tuỳ theo từng chart mà có yêu cầu bắt buộc phải có. Ở đây mình sẽ chọn list ra 1 cái bảng có những field mong muốn
+
+![](/img/screen-shot-2024-10-10-at-22.26.20.png)
+
+Cuối cùng nhấn Save, và chọn Dashboard bạn muốn hiển thị chart lên (nếu Dashboard chưa tồn tại, thì hệ thống sẽ tạo ra Dashboard và nhúng Chart vào). Nhấn Save & Go to Dashboard
+
+![](/img/screen-shot-2024-10-10-at-22.27.09.png)
+
+Như vậy là, bạn đã tạo ra được một cái Dashboard chuyên nghiệp rồi nhé
+
+![](/img/screen-shot-2024-10-10-at-22.27.21.png)
