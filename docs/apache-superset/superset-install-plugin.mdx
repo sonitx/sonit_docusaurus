@@ -1,0 +1,86 @@
+[https://preset.io/blog/building-custom-viz-plugins-in-superset-v2/](https://preset.io/blog/building-custom-viz-plugins-in-superset-v2/)
+
+Đầu tiên, cần cài đặt  Superset Yeoman Generator.&#x20;
+
+```shell
+npm i -g yo
+```
+
+Đứng ở thư mục gốc của Superset
+
+```
+cd superset-frontend/packages/generator-superset
+npm i
+npm link
+```
+
+Tạo thư mục để chứa plugin
+
+```
+mkdir -p /tmp/son-plugin-chart
+cd /tmp/son-plugin-chart
+yo @superset-ui/superset
+```
+
+Nếu trong quá trình chạy bị lỗi:
+
+```
+Error @superset-ui/superset
+
+Current environment doesn't provides some necessary feature this generator needs.
+```
+
+Thì bạn chạy lệnh sau để fix nhé:
+
+```
+npm i -g @superset-ui/generator-superset
+```
+
+Sau đó, bạn nhập tên thuộc tính của plugin, để setup các folder/file cần thiết để tạo Superset plugin nhé
+
+```
+
+     _-----_     ╭──────────────────────────╮
+    |       |    │      Welcome to the      │
+    |--(o)--|    │    generator-superset    │
+   `---------´   │        generator!        │
+    ( _´U`_ )    ╰──────────────────────────╯
+    /___A___\   /
+     |  ~  |
+   __'.___.'__
+ ´   `  |° ´ Y `
+
+? Package name: son-plugin-chart
+? Plugin name: Son Plugin Chart
+? Description: Son Plugin Chart
+? What type of chart would you like? Regular chart
+```
+
+Sau khi hoàn thành quá trình cài đặt, bạn chạy tiếp các lệnh sau:
+
+```
+npm ci
+npm run build
+```
+
+Run plugin trên môi trường local để tiến hành bước tiếp theo
+
+```
+npm run dev
+```
+
+Tiếp theo, vào thư mục \`superset-frontend\` trong project Superset. Link plugin của bạn vào
+
+```
+npm i -S /tmp/son-plugin-chart
+```
+
+Cuối cùng, chạy thử trên môi trường local. Lưu ý, cần phải bật server của superset-app trước
+
+```
+npm run dev-server
+```
+
+![Cách tự tạo Superset plugin](/img/screen-shot-2024-10-10-at-17.52.25.png)
+
+![](/img/screen-shot-2024-10-10-at-17.52.06.png)
