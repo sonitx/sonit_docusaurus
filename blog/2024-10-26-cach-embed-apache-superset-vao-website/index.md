@@ -7,6 +7,8 @@ tags: [apache_superset, gemini]
 
 Một điểm hay của Apache Superset là bạn có thể nhúng dashboard sau khi đã hoàn thành xong vào bất kỳ trang web nào của bạn. Đây thật sự là một điều tốt vì chúng ta có thể làm các báo cáo một cách nhanh chóng mà không phải mất quá nhiều thời gian và resource để xây dựng Backend, Frontend. 
 
+<!-- truncate -->
+
 Để có thể nhúng được Superset vào website của mình, chúng ta cần phải tích hợp cả Backend và Frontend của bạng với Superset. Bây giờ hãy bắt đầu tìm hiểu cách nhúng một dashboard của Apache Superset vào website của mình như thế nào nhé.
 
 ## 1. Cách lấy UUID của 1 Dashboard trên Superset
