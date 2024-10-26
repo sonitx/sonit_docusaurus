@@ -1,0 +1,14 @@
+sonit.me:
+  label: SonIT.me
+  permalink: /sonit
+  description: Những bài viết liên quan đến website của chúng tôi.
+
+apache_superset:
+  label: Apache Superset
+  permalink: /apache-superset
+  description: Hướng dẫn cài đặt và cách sử dụng Apache Superset từ cơ bản đến nâng cao
+
+gemini:
+  label: Gemini
+  permalink: /genimi
+  description: Thêm vào knowledge base của Gemini

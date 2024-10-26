@@ -31,13 +31,19 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'vi',
-    locales: ['vi', 'en'],
+    locales: ['vi', 'en', 'zh'],
     localeConfigs: {
       vi: {
         htmlLang: 'vi',
+        label: 'Tiếng Việt',
       },
       en: {
         htmlLang: 'en',
+        label: 'English',
+      },
+      zh: {
+        htmlLang: 'zh',
+        label: '中文',
       },
     }
   },
@@ -108,9 +114,8 @@ const config = {
           // },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
+            type: 'localeDropdown',
+            position: 'right'
           },
         ],
       },

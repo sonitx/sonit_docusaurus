@@ -1,0 +1,9 @@
+sonit:
+  name: Son Nguyen
+  title: Software Engineer
+  url: https://github.com/sonitx
+  image_url: /img/developer.png
+  page: true
+  socials:
+    github: sonitx
+
