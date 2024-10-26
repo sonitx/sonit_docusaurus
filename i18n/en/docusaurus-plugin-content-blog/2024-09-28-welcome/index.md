@@ -1,14 +1,14 @@
 ---
 slug: 2024-09-28-welcome
-title: Welcome
+title: Welcome SonIT.me
 authors: [sonit]
 tags: [sonit.me]
 ---
 
-SonIT.me [EN] được thành lập bởi những người có kinh nghiệm lâu năm trong lĩnh vực Công Nghệ Thông Tin, cũng như mong muốn cống hiến một phần sức nhỏ cho cộng đồng lập trình viên Việt Nam những bài viết hay, chất lượng, giúp cộng đồng ngày càng phát triển hơn.
+SonIT.me was founded by individuals with extensive experience in Information Technology, who also have a desire to contribute quality articles to the developer community all over the world, helping it grow and develop further.
 
 <!-- truncate -->
 
-Nếu bạn có bất kỳ đóng góp gì, đừng ngần ngại hãy liên hệ với chúng tôi qua email: info@sonit.me
+If you want any ideas, please don't hesitate to contact us via email: info@sonit.me
 
 ![Welcome SonIT.me](./img/welcome-sonit-me.jpg)
