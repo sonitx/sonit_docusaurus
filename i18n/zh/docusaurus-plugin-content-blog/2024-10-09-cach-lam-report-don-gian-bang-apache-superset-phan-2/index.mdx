@@ -1,0 +1,44 @@
+---
+slug: 2024-10-09-cach-lam-report-don-gian-bang-apache-superset-phan-2
+title: 如何使用 Apache Superset 制作简单的仪表板（第 2 部分）
+authors: [sonit]
+tags: [apache_superset, gemini]
+---
+
+在上一篇文章 [如何使用 Apache Superset 制作简单的仪表板（第 1 部分）](/2024-10-05-cach-lam-report-don-gian-bang-apache-superset-phan-1) 中，我指导了有关如何将数据源连接到 Superset 的说明。在今天的文章中，我将开始通过设计生动的图表和仪表板来利用数据源中的数据。
+
+<!-- truncate -->
+
+## 1. 从数据源创建数据集
+
+成功从 Superset 连接到我们的数据源后，我们需要创建一个数据集。
+
+选择主屏幕上方的数据集菜单
+
+![](/img/screen-shot-2024-10-10-at-22.20.59.png)
+
+打开后，您将看到系统中当前的所有数据集。单击按钮+数据集添加新数据集
+
+![](/img/screen-shot-2024-10-10-at-22.21.42.png)
+
+Superset 数据集必须来自数据源下的表、视图，或者您也可以从 SQLab 上运行的测试查询创建数据集。然后按“创建数据集并创建图表”
+
+![](/img/screen-shot-2024-10-10-at-22.24.40.png)
+
+## 2. 根据数据集创建仪表板和图表
+
+创建数据集后，系统会跳转到创建图表页面。在这里，您将选择与您的数据源匹配的图表。最简单的是，这里我会选择Table。选择后，点击创建新图表
+
+![](/img/screen-shot-2024-10-10-at-22.25.05.png)
+
+接下来，对于任何图表，您必须选择 Dimension 和 Metric，根据每个图表的不同，有强制要求。在这里，我将选择包含所需字段的表列表
+
+![](/img/screen-shot-2024-10-10-at-22.26.20.png)
+
+最后点击保存，选择要显示图表的Dashboard（如果Dashboard不存在，系统会创建一个Dashboard并嵌入图表）。单击保存并转到仪表板
+
+![](/img/screen-shot-2024-10-10-at-22.27.09.png)
+
+这样，您已经创建了一个专业的仪表板
+
+![](/img/screen-shot-2024-10-10-at-22.27.21.png)
