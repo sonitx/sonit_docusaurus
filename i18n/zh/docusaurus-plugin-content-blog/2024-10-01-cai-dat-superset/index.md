@@ -58,7 +58,7 @@ docker-compose -f docker-compose-non-dev.yml up -d
 
 ## 4. 访问 Superset 网站
 
-Superset的组件运行完毕后，访问http://localhost:8088打开Superset，使用Superset的默认账户登录：
+Superset的组件运行完毕后，访问 http://localhost:8088 打开Superset，使用Superset的默认账户登录：
 - 用户名：管理员
 - 密码：管理员
 

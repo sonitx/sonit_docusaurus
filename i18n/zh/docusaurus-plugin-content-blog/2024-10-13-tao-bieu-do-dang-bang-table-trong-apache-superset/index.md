@@ -42,7 +42,7 @@ tags: [apache_superset, gemini]
 
 ![Apache Superset 如何创建数据透视表](./img/apache_superset_pivot_table_1.png)
 
-例如：如上图，我想对哪些省份人口>500万，哪些城市人口<500万进行分组。
+例如：如上图，我想对哪些省份人口 `> 5tr` 万，哪些城市人口`< 5tr`万进行分组。
 
 ### b.如何创建表格图表
 
@@ -147,4 +147,4 @@ tags: [apache_superset, gemini]
 
 - 要格式化日、月和年，请在属性“TIMESTAMP_FORMAT”中选择所需的显示格式
 
-![Apache Superset 数字格式](./img/apache_superset_format_number.png))
+![Apache Superset 数字格式](./img/apache_superset_format_number.png)
