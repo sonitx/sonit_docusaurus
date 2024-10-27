@@ -1,44 +1,44 @@
 ---
 slug: 2024-10-09-cach-lam-report-don-gian-bang-apache-superset-phan-2
-title: Cách làm Dashboard đơn giản với Apache Superset (Phần 2)
+title: How to make a simple Dashboard with Apache Superset (Part 2)
 authors: [sonit]
 tags: [apache_superset, gemini]
 ---
 
-Ở bài viết trước [Cách làm Dashboard đơn giản với Apache Superset (Phần 1)](/2024-10-05-cach-lam-report-don-gian-bang-apache-superset-phan-1), mình đã hướng dẫn cách kết nối Datasource của bạn với Superset. Trong bài viết ngày hôm nay, mình sẽ bắt đầu khai thác dữ liệu từ nguồn data của mình bằng cách thiết kế các Chart, Dashboard sao cho sinh động nhé
+In the previous article [How to make a simple Dashboard with Apache Superset (Part 1)](/2024-10-05-cach-lam-report-don-gian-bang-apache-superset-phan-1), I instructed how to connect your Datasource to Superset. In today's article, I will start exploiting data from my data source by designing vivid Charts and Dashboards.
 
 <!-- truncate -->
 
-## 1. Tạo Dataset từ Datasource
+## 1. Create Dataset from Datasource
 
-Sau khi đã kết nối thành công từ Superset tới nguồn dữ liệu của mình, thì chúng ta cần tạo Dataset nhé.
+After successfully connecting from Superset to our data source, we need to create Dataset.
 
-Chọn menu Datasets ngay phía trên màn hình chính
+Select the Datasets menu right above the main screen
 
 ![](/img/screen-shot-2024-10-10-at-22.20.59.png)
 
-Khi mở ra, bạn sẽ thất tất cả các Dataset hiện tại đang có trong hệ thống. Nhấn vào button + Dataset để thêm 1 dataset mới
+When opened, you will see all the current Datasets in the system. Click on the + Dataset button to add a new dataset.
 
 ![](/img/screen-shot-2024-10-10-at-22.21.42.png)
 
-Dataset của Superset phải xuất phát từ 1 table, view dưới Datasource của bạn, hoặc bạn cũng có thể tạo một Dataset từ câu query chạy thử trên SQLab. Sau đó nhấn `Create dataset and create chart`
+The Superset's dataset must come from a table, view under your Datasource, or you can also create a Dataset from a test query on SQLab. Then click `Create dataset and create chart`
 
 ![](/img/screen-shot-2024-10-10-at-22.24.40.png)
 
-## 2. Tạo một Dashboard và chart từ dataset
+## 2. Create a Dashboard and chart from the dataset
 
-Sau khi đã tạo xong 1 Dataset, hệ thống sẽ chuyển bạn qua trang để tạo các cái chart. Ở đây, bạn sẽ chọn 1 chart phù hợp với nguồn data của mình. Đơn giản nhất là ở đây mình sẽ chọn Table. Chọn xong, nhấn Create new chart
+After creating a Dataset, the system will transfer you to the page to create charts. Here, you will choose a chart that is suitable for your data source. The simplest way is to choose Table. After selecting, click Create new chart
 
 ![](/img/screen-shot-2024-10-10-at-22.25.05.png)
 
-Tiếp theo, bất kỳ chart nào, bạn cũng phần phải chọn Dimension và Metric, tuỳ theo từng chart mà có yêu cầu bắt buộc phải có. Ở đây mình sẽ chọn list ra 1 cái bảng có những field mong muốn
+Next, for any chart, you must select Dimension and Metric, depending on each chart, there are mandatory requirements. Here I will choose to list a table with the desired fields.
 
 ![](/img/screen-shot-2024-10-10-at-22.26.20.png)
 
-Cuối cùng nhấn Save, và chọn Dashboard bạn muốn hiển thị chart lên (nếu Dashboard chưa tồn tại, thì hệ thống sẽ tạo ra Dashboard và nhúng Chart vào). Nhấn Save & Go to Dashboard
+Finally, click Save, and select the Dashboard you want to display the chart on (if the Dashboard does not exist, the system will create a Dashboard and embed the Chart). Click Save & Go to Dashboard
 
 ![](/img/screen-shot-2024-10-10-at-22.27.09.png)
 
-Như vậy là, bạn đã tạo ra được một cái Dashboard chuyên nghiệp rồi nhé
+So, you have created a professional Dashboard.
 
 ![](/img/screen-shot-2024-10-10-at-22.27.21.png)

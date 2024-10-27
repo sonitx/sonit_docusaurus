@@ -1,50 +1,50 @@
 ---
 slug: 2024-10-05-cach-lam-report-don-gian-bang-apache-superset-phan-1
-title: Cách làm Dashboard đơn giản với Apache Superset (Phần 1)
+title: How to make a simple Dashboard with Apache Superset (Part 1)
 authors: [sonit]
 tags: [apache_superset, gemini]
 ---
 
-Ở bài trước, mình đã [hướng dẫn các bạn cách cài đặt Apache Superset](/2024-10-01-cai-dat-superset). Sau khi đã cài đặt xong, thì điều đầu tiên chúng ta muốn nghĩ tới đó là làm sao có thể làm một dashboard, report bằng Superset được. Trong bài viết này, mình sẽ hướng dẫn các bạn từng bước để có thể làm được một report nhé, có hình ảnh minh hoạ
+In the previous post, I [instructed you how to install Apache Superset](/2024-10-01-cai-dat-superset). After installation, the first thing we want to think about is how to make a dashboard and report using Superset. In this post, I will guide you step by step to make a report, with illustrative images.
 
 <!-- truncate -->
 
-## 1. Tóm tắt quá trình
+## 1. Process Summary
 
-Để có thể làm được một Dashboard bằng Superset, thì điều kiện tiên quyết là bạn cần phải có nguồn dữ liệu, nghĩa là bạn sẽ lấy dữ liệu từ đâu để làm report. Như trong bài [giới thiệu về Superset](/2024-09-30-tim-hieu-ve-apache-superset) mình có chia sẻ, hiện tại Superset có thể hỗ trợ từ rất nhiều nguồn dữ liệu khác nhau như Postgres, MySQL, Clickhouse, Microsoft SQL Server, ...
+To be able to make a Dashboard with Superset, the prerequisite is that you need to have a data source, which means where will you get the data from to make the report. As I shared in the article [Introduction to Superset](/2024-09-30-tim-hieu-ve-apache-superset), currently Superset can support many different data sources such as Postgres, MySQL, Clickhouse, Microsoft SQL Server, ...
 
-Sau khi đã xác định được nguồn dữ liệu, thì các bạn cần phải kết nối Superset với nguồn dữ liệu của mình
+After identifying the data source, you need to connect Superset to your data source
 
-Tiếp theo, từ nguồn dữ liệu đó, cần phải tạo các Dataset trên Superset. Các report trên Superset không làm việc trực tiếp với nguồn dữ liệu của bạn, mà sẽ làm việc thông qua các Dataset
+Next, from that data source, you need to create Datasets on Superset. Reports on Superset do not work directly with your data source, but will work through Datasets
 
-Từ các Dataset đó, chúng ta có thể tạo ra các biểu đồ (Chart). Việc sắp xếp 1 hoặc nhiều biểu đồ lại với nhau trên một màn hình, màn hình đó gọi là Dashboard
+From those Datasets, we can create charts. Arranging 1 or more charts together on one screen, that screen is called Dashboard
 
-![Kiến trúc tổng quan của Apache Superset](./img/superset_architecture.png)
+![System architecture of Apache Superset](./img/superset_architecture.png)
 
-Nào, bây giờ chúng ta sẽ bắt đầu đi qua từng bước nhé
+Now, let's go through it step by step.
 
-## 2. Kết nối Superset đến Datasource
+## 2. Connect Superset to Datasource
 
-Như phần 1 mình đã đề cập đến, điều đầu tiên chúng ta cần đó là kết nối tới nguồn dữ liệu chúng ta muốn để làm report. Để kết nối được với nguồn dữ liệu, chúng ta làm tuần tự từng bước như sau:
+As I mentioned in part 1, the first thing we need is to connect to the data source we want to make a report. To connect to the data source, we do the following steps in sequence:
 
-Bước 1: Bạn dùng account có quyền Admin, nhấn vào menu Settings ở góc phải trên của màn hình -> chọn Database Connections
+Step 1: You use an account with Admin rights, click on the Settings menu in the upper right corner of the screen -> select Database Connections
 
-![Kết nối Superset với Datasource](./img/superset_2_1.png)
+![Connect Superset to Datasource](./img/superset_2_1.png)
 
-Bước 2: Chọn loại Database theo nguồn database của bạn. Ví dụ ở đây, mình sẽ chọn Postgres
+Step 2: Select the Database type according to your database source. For example, here I will choose Postgres
 
-![Kết nối Superset với Datasource](./img/superset_2_2.png)
+![Connect Superset to Datasource](./img/superset_2_2.png)
 
-Bước 3: Điền đẩy đủ các thông tin cần thiết như host, port, DB name, user, password để kết nối tới Database cần lấy dữ liệu làm report của bạn
+Step 3: Fill in all necessary information such as host, port, DB name, user, password to connect to the Database that needs to get data for your report.
 
-![Kết nối Superset với Datasource](./img/superset_2_3.png)
+![Connect Superset to Datasource](./img/superset_2_3.png)
 
-Bước 4: Sau khi connect thành công, thì sẽ chuyển qua màn hình config cuối cùng, ở đây mình quan tâm nhiều nhất là mục SQL Lab. Ở đây, bạn có thể cấp thêm quyền để có thễ tương tác với DB của mình thông qua SQl Lab
+Step 4: After successfully connecting, you will move to the final configuration screen, here I am most interested in the SQL Lab section. Here, you can grant additional permissions to be able to interact with your DB through SQl Lab
 
-![Kết nối Superset với Datasource](./img/superset_2_4.png)
+![Connect Superset to Datasource](./img/superset_2_4.png)
 
-Sau khi kết nối Database thành công, bạn sẽ thấy DB của mình nằm trong danh sách
+After successfully connecting to the Database, you will see your DB in the list.
 
-![Kết nối Superset với Datasource](./img/superset_2_5.png)
+![Connect Superset to Datasource](./img/superset_2_5.png)
 
-Như vậy, việc kết nối Datasource thành công.
+That's on, the Datasource connection is successful.

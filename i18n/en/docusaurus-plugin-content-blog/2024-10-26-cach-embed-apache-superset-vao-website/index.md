@@ -1,57 +1,58 @@
 ---
 slug: 2024-10-26-cach-embed-apache-superset-vao-website
-title: Cách nhúng (embed) dashboard của Apache Superset vào website
+title: How to embed Apache Superset dashboard into website
 authors: [sonit]
 tags: [apache_superset, gemini]
 ---
 
-Một điểm hay của Apache Superset là bạn có thể nhúng dashboard sau khi đã hoàn thành xong vào bất kỳ trang web nào của bạn. Đây thật sự là một điều tốt vì chúng ta có thể làm các báo cáo một cách nhanh chóng mà không phải mất quá nhiều thời gian và resource để xây dựng Backend, Frontend. 
+One good thing about Apache Superset is that you can embed the completed dashboard into any of your websites. This is really a good thing because we can make reports quickly without spending too much time and resources to build Backend, Frontend.
 
 <!-- truncate -->
 
-Để có thể nhúng được Superset vào website của mình, chúng ta cần phải tích hợp cả Backend và Frontend của bạng với Superset. Bây giờ hãy bắt đầu tìm hiểu cách nhúng một dashboard của Apache Superset vào website của mình như thế nào nhé.
+To be able to embed Superset into your website, we need to integrate both your Backend and Frontend with Superset. Now let's start learning how to embed an Apache Superset dashboard into your website.
 
-## 1. Cách lấy UUID của 1 Dashboard trên Superset
+## 1. How to get the UUID of a Dashboard on Superset
 
-### a. Cài đặt biến môi trường
+### a. Setting environment variables
 
-- Đầu tiên, để có thể mở chức năng cho phép nhúng một Dashboard của Superset vào bất kỳ trang web nào, chúng ta cần setup biến môi trường của Superset
+- First, to enable the function to embed a Superset Dashboard into any website, we need to set up the Superset environment variable
 
-- Nếu bạn deploy bằng Docker, bạn hãy mở file `docker/pythonpath_dev/superset_config.py`, tìm đến dòng `FEATURE_FLAGS`, và thêm biến `EMBEDDED_SUPERSET` vào config với giá trị là True
+- If you deploy using Docker, open the file `docker/pythonpath_dev/superset_config.py`, find the line `FEATURE_FLAGS`, and add the variable `EMBEDDED_SUPERSET` to the config with the value `True`
 
-![Cách nhúng Dashboard của Apache Superset](./img/apache_superset_embeded_dashboard_1.png)
+![How to embed a Dashboard of Apache Superset](./img/apache_superset_embeded_dashboard_1.png)
 
-Các bạn nhớ, sau khi config xong thì cần phải restart lại container của mình thì mới nhận được biến môi trường nhé
+Remember, after finishing the configuration, you need to restart your container to receive the environment variable
 
-### b. Cách lấy UUID
+### b. How to get Dashboard UUID
 
-Mỗi Dashboard đều có 1 key riêng, format theo định dạng của UUID. Để nhúng được vào website, thì Superset cần phải biết bạn muống nhúng Dashboard nào, vì vậy cần phải lấy UUID của dashboard bạn mong muốn nhúng
+Each Dashboard has a unique key, formatted according to the UUID format. To embed it into the website, Superset needs to know which Dashboard you want to embed, so you need to get the UUID of the dashboard you want to embed
 
-Sau khi đã mở config `EMBEDDED_SUPERSET=True`, bạn làm các bước sau để lấy UUID nhé:
-- Bước 1: mở dashboard mà bạn muốn nhúng
-- Bước 2: Nhấn vào nút ba chấm ở góc trên bên phải, sau đó chọn `Embed dashboard`
+After opening the `EMBEDDED_SUPERSET=True` configuration, follow these steps to get the UUID:
 
-![Cách nhúng Dashboard của Apache Superset](./img/apache_superset_embeded_dashboard_2.png)
+- Step 1: open the dashboard you want to embed
+- Step 2: Click on the three dots in the upper right corner, then select `Embed dashboard`
 
-- Bước 3: Một popup nhỏ hiện lên, nhấn nút `ENABLE EMBEDDING`
+![How to embed Apache Superset Dashboard](./img/apache_superset_embeded_dashboard_2.png)
 
-![Cách nhúng Dashboard của Apache Superset](./img/apache_superset_embeded_dashboard_3.png)
+- Step 3: A small popup appears, click the `ENABLE EMBEDDING` button
 
-- Bước 4: bạn sẽ thấy UUID của dashboard này, đây là key của dashboard phục vụ cho việc tích hợp vào website. Bạn cần note lại key này để làm các bước tiếp theo nhé
+![How to embed Apache Superset Dashboard](./img/apache_superset_embeded_dashboard_3.png)
 
-![Cách nhúng Dashboard của Apache Superset](./img/apache_superset_embeded_dashboard_4.png)
+- Step 4: you will see the UUID of this dashboard, this is the key of the dashboard for integrating into the website. You need to note this key to do the next steps
+
+![How to embed Apache Superset Dashboard](./img/apache_superset_embeded_dashboard_4.png)
 
 ## 2. Backend
 
-### a. Nhiệm vụ
+### a. Goals
 
-- Tích hợp trực tiếp với API của Apache Superset, bao gồm: xác thực (Authorization), phân quyền, lấy Guest Token để cung cấp cho FE nhúng vào Superset
+- Directly integrate with Apache Superset API, including: authentication, authorization, get Guest Token to provide FE embedded in Superset
 
-- Tích hợp với Superset phía Backend sẽ đảm bảo tính bảo mật, tránh lộ những thông tin nhạy cảm như username, password
+- Integrate with Superset on the Backend to ensure security, avoid revealing sensitive information such as username, password
 
-### b. Các bước tích hợp với Apache Superset
+### b. Steps to integrate with Apache Superset
 
-**Bước 1: Gọi API login để lấy access token**
+**Step 1: Call API login to get access token**
 
 ```shell
 curl --location '{{superset_domain}}/api/v1/security/login' \
@@ -65,12 +66,12 @@ curl --location '{{superset_domain}}/api/v1/security/login' \
 ```
 
 :::warning
-- user_login / password_login: account login vào Superset. Account này phải có quyền **can grant guest token on SecurityRestApi**
-![Cách nhúng Dashboard của Apache Superset](./img/apache_superset_embeded_dashboard_5.png)
-- superset_domain: domain của website superset
+- user_login / password_login: account login to Superset. This account must have the right **can grant guest token on SecurityRestApi**
+![How to embed Apache Superset Dashboard](./img/apache_superset_embeded_dashboard_5.png)
+- superset_domain: domain of the superset website
 :::
 
-**Bước 2: Gọi API để lấy csrf token**
+**Step 2: Call API to get csrf token**
 
 ```shell
 curl --location '{{superset_domain}}/api/v1/security/csrf_token/' \
@@ -78,10 +79,10 @@ curl --location '{{superset_domain}}/api/v1/security/csrf_token/' \
 ```
 
 :::warning
-- access_token: được lấy từ kết quả trả ra của API login ở bước 1
+- access_token: taken from the output of the login API in step 1
 :::
 
-**Bước 3: Gọi API lấy guest token**
+**Step 3: Call API to get guest token**
 
 ```shell
 curl --location '{{superset_domain}}/api/v1/security/guest_token/' \
@@ -105,32 +106,32 @@ curl --location '{{superset_domain}}/api/v1/security/guest_token/' \
 ```
 
 :::warning
-- access_token: được lấy từ kết quả trả ra của API login ở bước 1
-- csrf_token: được lấy từ kết quả trả ra của API login ở bước 2
-- dashboard_uuid: uuid của dashboard được lấy từ phần [1]
+- access_token: taken from the output of the login API in step 1
+- csrf_token: taken from the output of the login API in step 2
+- dashboard_uuid: the uuid of the dashboard is taken from section [1]
 :::
 
 :::warning
-rls (Row Level Security): thường dùng để phân quyền data theo level row trong Dataset. Như ví dụ trên, thì mình chỉ lấy dữ liệu của team có ID = 1
+rls (Row Level Security): often used to authorize data according to row level in Dataset. As in the example above, I only get data of team with ID = 1
 :::
 
 ## 3. Frontend
 
-### a. Nhiệm vụ
+### a. Goals
 
-- Sau khi đã lấy được guest token phía Backend, thì tiếp theo chúng ta cần làm sao để có thể hiển thị dashboard của Superset trên website. 
+- After getting the guest token on the Backend, the next thing we need to do is to display the Superset dashboard on the website.
 
-- Apache Superset cung cấp cho chúng ta một thư viện SDK cho React JS, để có thễ dễ dàng đưa dashboard của mình vào website
+- Apache Superset provides us with an SDK library for React JS, so we can easily put our dashboard on the website
 
-### b. Các bước thực hiện 
+### b. Implementation steps
 
-**Bước 1: Cài đặt Superset Embed SDK**
+**Step 1: Install Superset Embed SDK**
 
 ```shell
 npm install --save @superset-ui/embedded-sdk
 ```
 
-**Bước 2: Nhúng SDK vào website muốn hiển thị Dashboard**
+**Step 2: Embed SDK into the website where you want to display Dashboard**
 
 ```js
 import { useEffect } from "react";
@@ -140,7 +141,7 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 // Import Superset SDK
 import { embedDashboard } from "@superset-ui/embedded-sdk";
 
-// Function này gọi API tới Backend để lấy Guest Token
+// This function calls API to Backend to get Guest Token
 const getToken = async () => 'eyJ0e...';
 
 function Superset() {
@@ -177,7 +178,7 @@ function Superset() {
 export default Superset;
 ```
 
-Cuối cùng, chúng ta cùng xem kết quả nhé
+Finally, let's see the result
 
-![Cách nhúng Dashboard của Apache Superset](./img/apache_superset_embeded_dashboard_6.png)
+![How to embed Apache Superset Dashboard](./img/apache_superset_embeded_dashboard_6.png)
 

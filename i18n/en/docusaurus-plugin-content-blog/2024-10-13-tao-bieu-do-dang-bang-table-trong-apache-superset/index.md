@@ -1,150 +1,149 @@
 ---
 slug: 2024-10-13-tao-bieu-do-dang-bang-table-trong-apache-superset
-title: Tạo biểu đồ dạng bảng (table) trong Apache Superset
+title: Creating a table chart in Apache Superset
 authors: [sonit]
 tags: [apache_superset, gemini]
 ---
-Biểu đồ dạng bảng (Table) là một trong những dạng biểu đồ phổ biến nhất và đơn giản nhất khi làm report. Mục đích của các biểu đồ này là giúp cho người xem quan sát được con số cụ thể của từng tiêu chí như thế nào? Có thể xem theo dạng sắp xếp theo một thứ tự nào đó, hoặc đơn giản nhất là liệt kê theo từng cột trong Dataset của mình. 
+Table charts are one of the most popular and simplest types of charts when making reports. The purpose of these charts is to help viewers see the specific numbers of each criterion. They can be viewed in a certain order, or simply listed by column in your Dataset.
 
 <!-- truncate -->
 
-## 1. Các loại biểu đồ dạng bảng (Table Chart)
+## 1. Types of Table Charts
 
-Khi bạn vào menu Charts của Superset, chọn loại chart là Table, bạn sẽ thấy Superset đã có sẵn 3 loại cho chúng ta lựa chọn, đó là: Table, Pivot Table, Time-series Table. Tuỳ vào từng nhu cầu cụ thể của bài toán đưa ra, bạn sẽ chọn loại biểu đồ sao cho phù hợp nhé. 
+When you go to the Charts menu of Superset, select the chart type as Table, you will see that Superset has 3 types for us to choose from, which are: Table, Pivot Table, Time-series Table. Depending on the specific needs of the given problem, you will choose the appropriate chart type.
 
-![Apache Superset chọn loại biểu đồ dạng bảng](./img/superset-choose-chart-type.png)
+![Apache Superset tabular charts](./img/superset-choose-chart-type.png)
 
-Dưới đây, mình sẽ hướng dẫn chi tiết theo từng loại nhé
+Below, I will give detailed instructions for each type
 
-## 2. Tạo biểu đồ bảng (Table)
+## 2. Create a table chart
 
-### a. Giới thiệu
+### a. Introduction
 
-Biểu đồ dạng bảng (Table) là biểu đồ đơn giản, thể hiện theo hàng ngang và hàng cột giống với Excel
+A table chart is a simple chart, displayed in horizontal rows and columns similar to Excel
 
-Mục đích: dùng để hiển thị chi tiết dữ liệu của mình, chẳng hạn như danh sách giao dịch, danh sách đơn hàng, danh sách nhân viên, danh sách học sinh, ... Loại biểu đồ này bạn có thể thấy ở nhiều nơi, bất cứ chỗ nào có dữ liệu thì bạn đều có thể bắt gặp loại biểu đồ này.
+Purpose: used to display detailed data, such as transaction lists, order lists, employee lists, student lists, etc. You can see this type of chart in many places, wherever there is data, you can see this type of chart.
 
-![Apache Superset biểu đồ bảng table chart](./img/apache-superset-table-chart.png)
+![Apache Superset tabular charts](./img/apache-superset-table-chart.png)
 
-### b. Cách tạo biểu đồ bảng
+### b. How to create a table chart
 
-Quy trình tạo một biểu đồ như thế nào, mình đã giới thiệu ở bài [Cách làm report đơn giản bằng Superset](/2024-10-09-cach-lam-report-don-gian-bang-apache-superset-phan-2). Để tạo biểu đồ bảng rất đơn giản, bạn chỉ cần việc chọn cột nào cần hiển thị trên biểu đồ của bạn, sau đó nhấn Update Chart, thì bạn có thể nhìn thấy thành quả của mình ở bên phía tay phải
+The process of creating a chart, I have introduced in the article [How to make a simple report with Superset](/2024-10-09-cach-lam-report-don-gian-bang-apache-superset-phan-2). To create a table chart is very simple, you just need to select which columns need to be displayed on your chart, then click Update Chart, then you can see your results on the right side
 
-![Apache Superset cách tạo biểu đồ bảng table chart](./img/apache-superset-table-chart-2.png)
+![Apache Superset how to create table chart](./img/apache-superset-table-chart-2.png)
 
-## 3. Tạo biểu đồ Pivot (Pivot Table)
+## 3. Create a Pivot Chart (Pivot Table)
 
-### a. Giới thiệu
+### a. Introduction
 
-Pivot Table là một dạng biểu đồ nhóm lại các tiêu chí giống nhau, và có thể tính toán các con số dựa vào tiêu chí đó.
+Pivot Table is a type of chart that groups similar criteria, and can calculate numbers based on those criteria.
 
-Mục đích: giúp xem thống kê nhanh theo tiêu chí mà người xem mong muốn. 
+Purpose: to help quickly view statistics according to the criteria that the viewer wants.
 
-![Apache Superset cách tạo pivot table](./img/apache_superset_pivot_table_1.png)
+![Apache Superset how to create pivot table](./img/apache_superset_pivot_table_1.png)
 
-VD: như hình trên, mình mong muốn nhóm lại những tỉnh nào có dân số > 5 triệu người, và những thành phố nào < 5 triệu người 
+For example: as shown above, I want to group which provinces have a population > 5 million people, and which cities have < 5 million people
 
-### b. Cách tạo biểu đồ bảng
+### b. How to create a table chart
 
-Bước 1: Bạn cần phải chọn loại Chart là Pivot Table
+Step 1: You need to select the Chart type as Pivot Table
 
-Bước 2: Pivot Table bắt buộc bạn phải có 2 phần: 
-* 1. Dimension (tức bạn muốn nhóm lại theo tiêu chí nào), có 2 dạng là Row (xem theo dòng) và Column (xem theo cột) 
-* 2. Metric (bạn muốn dùng phép tính gì cho Dimension của bạn), ví dụ như Sum, Average, Min, Max, ...
+Step 2: Pivot Table requires you to have 2 parts:
+* 1. Dimension (you want to group by what criteria), there are 2 types: Row (view by row) and Column (view by column)
+* 2. Metric (what calculation do you want to use for your Dimension), for example Sum, Average, Min, Max, ...
 
-![Apache Superset cách tạo pivot table](./img/apache_superset_pivot_table_2.png)
+![Apache Superset how to create pivot table](./img/apache_superset_pivot_table_2.png)
 
-## 4. Tạo biểu đồ Time Series (Time-series Table)
+## 4. Create a Time Series Chart (Time-series Table)
 
-### a. Giới thiệu
+### a. Introduction
 
-Time-series table là một dạng chart dùng để xem xu hướng của data theo thời gian. VD trong 1 tuần, mình muốn xem kết quả kinh doanh của mình theo từng ngày là tăng hay giảm, thì có thể dùng biểu đồ này
+Time-series table is a type of chart used to view data trends over time. For example, in 1 week, I want to see my business results by day, whether they increase or decrease, I can use this chart
 
-![Apache Superset cách tạo time-series chart](./img/apache_superset_time_series_table_1.jpg)
+![Apache Superset how to create a time-series chart](./img/apache_superset_time_series_table_1.jpg)
 
-Biểu đồ này giúp người dùng có thể xem xu hướng 
+This chart helps users to view trends
 
 :::warning
 
-Lưu ý: để có thể xây dựng một biểu đồ Time-Series, trong dataset của bạn bắt buộc phải có 1 column để xác định thời gian mà chúng ta cần xem xu hướng. VD: ngày tạo, ngày cập nhật, ...
+Note: to be able to build a Time-Series chart, your dataset must have a column to determine the time we need to view the trend. For example: creation date, update date, ...
 
 :::
 
-### b. Cách tạo biểu đồ Time-Series
+### b. How to create a Time-Series chart
 
-Bước 1: Bạn cần phải chọn loại Chart là Time-series Table, và chọn Dataset cần để làm report
+Step 1: You need to select the Chart type as Time-series Table, and select the Dataset needed to make the report
 
-Bước 2: Trên Time-series Table sẽ có một vài thuộc tính sau:
-- Time Column: chọn column có kiểu dữ liệu timestamp trong Dataset
-- Time Grain: chọn mức thời gian muốn xem xu hướng (theo ngày, theo tuần, theo tháng ...)
-- Metrics: chọn cách dữ liệu bạn muốn xem 
-- Time series columns: chọn kiểu bạn muốn xem (số, line, ...)
+Step 2: On the Time-series Table, there will be a few of the following properties:
+- Time Column: select the column with the timestamp data type in the Dataset
+- Time Grain: select the time level you want to see the trend (by day, by week, by month ...)
+- Metrics: select the data type you want to see
+- Time series columns: select the type you want to see (number, line, ...)
 
-![Apache Superset cách tạo time-series chart](./img/apache_superset_time_series_table_2.png)
+![Apache Superset how to create a time-series chart](./img/apache_superset_time_series_table_2.png)
 
-![Apache Superset cách tạo time-series chart](./img/apache_superset_time_series_table_3.png)
+![Apache Superset how to create a time-series chart](./img/apache_superset_time_series_table_3.png)
 
-## 5. Một số thủ thuật khi làm việc với biểu đồ dạng bảng
+## 5. Some tips when working with table charts
 
-### a. Cách đổi tên cột
+### a. How to rename columns
 
-Thông thường, Superset sẽ lấy tên column trong Dataset để làm tên column của report. Điều này sẽ không thân thiện với người dùng, mà có nhiều khả năng sẽ gây khó hiểu cho người dùng.
+Usually, Superset will take the column name in Dataset as the column name of the report. This will not be user-friendly, but will most likely cause confusion for users.
 
-![Apache Superset Table Chart đổi tên cột](./img/table-change-column-name-1.png)
-![Apache Superset Table Chart đổi tên cột](./img/table-change-column-name-2.png)
+![Apache Superset Table Chart change column name](./img/table-change-column-name-1.png)
+![Apache Superset Table Chart change column name](./img/table-change-column-name-2.png)
 
-Để đổi tên cột, bạn làm theo từng bước sau:
-- Bước 1: Nhấn vào cột bạn muốn đổi tên
-- Bước 2: Chọn tab `CUSTOM SQL`
-- Bước 3: Nhấn vào cây bút trên header
-- Bước 4: Đổi tên lại theo như mong muốn
-- Bước 5: nhấn Save
+To change the column name, follow these steps:
+- Step 1: Click on the column you want to rename
+- Step 2: Select the `CUSTOM SQL` tab
+- Step 3: Click on the pen on the header
+- Step 4: Rename it as desired
+- Step 5: Click Save
 
-![Apache Superset Table Chart đổi tên cột](./img/table-change-column-name-3.png)
+![Apache Superset Table Chart change column name](./img/table-change-column-name-3.png)
+### b. Filtering displayed data
 
-### b. Lọc data hiển thị
+- This data filtering section is available on almost all charts
+- The purpose is to filter out the data you want to display on the chart. For example: you have a dataset with all the provinces of Vietnam. If you want to make a chart that only displays data from the South, this is an effective choice
+- You can use it in a simple way by selecting the column and the conditions to display. Or you can write a query in the `CUSTOM SQL` tab to create filters with higher complexity, or combine multiple conditions together
 
-- Phần lọc data này hầu hết đều có trên tất cả các chart
-- Mục đích dùng để lọc bớt data muốn hiển thị trên chart. VD: bạn có 1 dataset có tất cả các tỉnh thành của Việt Nam. Nếu bạn muốn làm một chart chỉ hiển thị data của miền Nam, thì đây là lựa chọn hiệu quả
-- Bạn có thể dùng theo cách đơn giản là chọn column và điều kiện cần hiển thị. Hoặc bạn có thể viết câu query ở tab `CUSTOM SQL` để cho ra những bộ lọc có độ phức tạp cao hơn, hoặc là kết hợp nhiều điều kiện với nhau
+![Apache Superset how to filter data](./img/apache_superset_filter.png)
 
-![Apache Superset cách filter dữ liệu](./img/apache_superset_filter.png)
+### c. Sort data by condition
 
-### c. Sắp xếp dữ liệu theo điều kiện
+- You select the column to sort by the `SORT BY` attribute
+- Below, you will see the `SORT DESCENDING` check box. If you check this checkbox, your data will be sorted from high to low, otherwise from low to high
 
-- Bạn chọn cột cần sắp xếp của thuộc tính `SORT BY`
-- Phía dưới, bạn sẽ thấy check box `SORT DESCENDING`. Nếu check và checkbox này, thì data của bạn sẽ được sắp xếp từ cao xuống thấp, ngược lại là từ thấp lên cao
+![Apache Superset data sorting method](./img/apache_superset_sort.png)
 
-![Apache Superset cách sắp xếp dữ liệu](./img/apache_superset_sort.png)
+### d. Add data search box
 
-### d. Thêm ô tìm kiếm dữ liệu
+- Apply to original Table chart (by row and column)
+- Use to search for keywords in the table
+- Click on the `CUSTOMIZE` tab, tick the `SEARCH BOX` box. So we can search for data in the Table
 
-- Áp dụng cho chart Table gốc (theo hàng và cột)
-- Dùng để tìm kiến từ khoá có trong table
-- Nhấn qua tab `CUSTOMIZE`, tick vào ô `SEARCH BOX`. Như vậy là chúng ta có thể tìm kiếm dữ liệu trong Table được
+![Apache Superset how to add search box](./img/apache_superset_table_search.png)
 
-![Apache Superset cách thêm ô tìm kiếm](./img/apache_superset_table_search.png)
+### e. Paging
 
-### e. Phân trang
+- Also applies to the original table
+- This paging is necessary when the amount of data you need to display has a lot of rows
+- Click on the `CUSTOMIZE` tab, right in the `PAGE LENGTH` section, you choose the number of rows you want to display in 1 page, then Superset will automatically display the page number
 
-- Cũng áp dụng cho table gốc
-- Việc phân trang này cần thiết khi mà lượng dữ liệu của bạn cần hiển thị có rất nhiều dòng
-- Nhấn qua tab `CUSTOMIZE`, ngay phần `PAGE LENGTH`, bạn chọn số lượng dòng muốn hiển thị trong 1 trang, thì Superset sẽ tự động hiển thị số trang
+![Apache Superset paging method](./img/apache_superset_paging_1.png)
 
-![Apache Superset cách phân trang](./img/apache_superset_paging_1.png)
+- However, this is only the method on the Frontend and is not optimized for performance if you have many rows of data. Therefore, Superset allows you to paginate from the Backend (Server) by ticking the checkbox `SERVER PAGINATION`
 
-- Tuy nhiên, đây chỉ là cách trên Frontend và hoàn toàn không tối ưu performance nếu như bạn có nhiều dòng dữ liệu. Vì vậy, Superset cho bạn phân trang từ Backend (Server) bằng cách bạn tick chọn vào checkbox `SERVER PAGINATION`
+![Apache Superset paging method](./img/apache_superset_paging_2.png)
 
-![Apache Superset cách phân trang](./img/apache_superset_paging_2.png)
+### f. Format letters and numbers
 
-### f. Định dạng lại chữ, số
+- By default, Superset will display all numbers, or format numbers, dates and months according to the default format. We can change the format as desired
+- Click `CUSTOMIZE`, select the column you want to change the format -> a popup appears, select the `NUMBER FORMATTING` tab
+- Superset is using D3 Format (https://github.com/d3/d3-format). If any formats Superset does not have in the list, you can completely type the format directly according to D3
 
-- Mặc định, Superset sẽ hiển thị ra tất cả các số, hoặc định dạng số, ngày tháng năm theo format mặc định. Chúng ta có thể đổi lại format như mong muốn
-- Nhấn vào `CUSTOMIZE`, chọn vào column bạn muốn thay đổi format -> một popup hiện ra, chọn tab `NUMBER FORMATTING`
-- Superset đang sử dụng D3 Format (https://github.com/d3/d3-format). Nếu những định dạng nào Superset không có trong danh sách, bạn hoàn toàn có thể gõ trực tiếp định dang theo D3
+![Apache Superset format numbers](./img/apache_superset_format_number.png)
 
-![Apache Superset định dạng chữ số](./img/apache_superset_format_number.png)
+- To format the day, month, year, you choose the desired display format in the `TIMESTAMP FORMAT` attribute
 
-- Để format ngày, tháng, năm thì bạn chọn format hiển thị như mong muốn trong thuộc tính `TIMESTAMP FORMAT`
-
-![Apache Superset định dạng chữ số](./img/apache_superset_format_number.png)
+![Apache Superset format numbers](./img/apache_superset_format_number.png)
