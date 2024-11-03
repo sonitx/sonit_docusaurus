@@ -58,7 +58,7 @@ docker run -d --gpus=all -v ~/ollama:/root/.ollama -p 11434:11434 --name ollama 
 - 端口 11434 是应用程序可以通过 Rest API 与 Ollame 通信的端口
 :::
 
-## 4. Cài đặt model trên Ollama
+## 4. 在Ollama上安装模型
 
 Ollama本质上是一个运行LLM模型的支持工具，完成上述步骤的安装后，我们仍然不能将其用作普通的聊天机器人，而是需要在Ollama上安装一个额外的模型。
 
