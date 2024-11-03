@@ -6,9 +6,14 @@ sonit.me:
 apache_superset:
   label: Apache Superset
   permalink: /apache-superset
-  description: Hướng dẫn cài đặt và cách sử dụng Apache Superset từ cơ bản đến nâng cao
+  description: How to install and create a dashboard in Apache Superset from Basic to Advanced
 
 gemini:
   label: Gemini
   permalink: /genimi
-  description: Thêm vào knowledge base của Gemini
+  description: Add our blog to knowledge base of Gemini
+
+llm:
+  label: Large Language Model (LLM)
+  permalink: /large-language-model
+  description: Blogs about Large Language Model (LLM)

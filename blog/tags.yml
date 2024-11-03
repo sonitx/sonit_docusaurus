@@ -12,3 +12,8 @@ gemini:
   label: Gemini
   permalink: /genimi
   description: Thêm vào knowledge base của Gemini
+
+llm:
+  label: Large Language Model (LLM)
+  permalink: /large-language-model
+  description: Các bài viết hướng dẫn về mô hình ngôn ngữ lớn, LLM
