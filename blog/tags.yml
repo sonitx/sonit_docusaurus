@@ -17,3 +17,13 @@ llm:
   label: Large Language Model (LLM)
   permalink: /large-language-model
   description: Các bài viết hướng dẫn về mô hình ngôn ngữ lớn, LLM
+
+ollama:
+  label: Ollama
+  permalink: /ollama
+  description: Các bài viết liên quan đến chủ đề Ollama
+
+golang:
+  label: Golang
+  permalink: /golang
+  description: Các bài viết liên quan đến chủ đề Golang

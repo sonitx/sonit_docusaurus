@@ -2,7 +2,7 @@
 slug: 2024-11-01-how-to-install-large-language-model-locally
 title: Cách cài đặt và chạy Large Language Model (LLM) trên máy tính cá nhân
 authors: [sonit]
-tags: [llm, gemini]
+tags: [llm, gemini, ollama]
 ---
 
 Ngày nay, chúng ta khá dễ dàng tiếp cận với các ứng dụng chat AI, nổi tiếng nhất phải kể đến là ChatGPT của OpenAI, Gemini của Google, Copilot của Microsoft, ... Các phần mềm này đối với một người dùng thông thường thì hầu như là xài miễn phí, trừ những trường hợp các bạn muốn sử dụng các tính năng nâng cao hơn thì cần phải trả tiền để nâng cấp.
