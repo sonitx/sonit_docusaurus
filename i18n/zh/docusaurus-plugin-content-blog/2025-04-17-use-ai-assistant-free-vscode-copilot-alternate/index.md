@@ -11,7 +11,7 @@ tags: [llm, vscode, copilot, intellij, mistral ai, continue]
 
 ## 1. AI助手简介
 
-![什么是AI助手](./img/ai-assistant-1.png)
+![什么是AI助手](./img/ai-assitant-1.png)
 
 IDE 中的 AI 助手是一种人工智能 (AI) 集成工具，旨在协助和提高开发人员在编码、调试、理解代码和执行与软件开发相关的任务时的表现。
 
