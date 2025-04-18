@@ -59,7 +59,7 @@ const config = {
 
   presets: [
     [
-      'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: false,
@@ -68,6 +68,7 @@ const config = {
           showReadingTime: false,
           feedOptions: {
             type: ['rss', 'atom'],
+            limit: 10,
             xslt: true,
             createFeedItems: async (params) => {
               const {blogPosts, defaultCreateFeedItems, ...rest} = params;

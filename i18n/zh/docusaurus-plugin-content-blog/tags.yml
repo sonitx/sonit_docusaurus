@@ -1,14 +1,54 @@
 sonit.me:
   label: SonIT.me
   permalink: /sonit
-  description: Những bài viết liên quan đến website của chúng tôi.
+  description: 与我们的网站相关的文章。
 
 apache_superset:
   label: Apache Superset
   permalink: /apache-superset
-  description: Hướng dẫn cài đặt và cách sử dụng Apache Superset từ cơ bản đến nâng cao
+  description: 如何在 Apache Superset 中安装和创建仪表板（从基础到高级）
 
 gemini:
   label: Gemini
   permalink: /genimi
-  description: Thêm vào knowledge base của Gemini
+  description: 将我们的博客添加到 Gemini 的知识库
+
+llm:
+  label: 大型语言模型 (LLM)
+  permalink: /large-language-model
+  description: 关于大型语言模型 (LLM) 的博客
+
+ollama:
+  label: Ollama
+  permalink: /ollama
+  description: 与 Ollama 相关的文章
+
+golang:
+  label: Golang
+  permalink: /golang
+  description: 与 Golang 相关的文章
+
+vscode:
+  label: vscode
+  permalink: /vscode
+  description: 与 vscode 主题相关的文章
+
+copilot:
+  label: copilot
+  permalink: /copilot
+  description: 与主题副驾驶相关的文章
+
+intellij:
+  label: intellij
+  permalink: /intellij
+  description: 与 intellij 主题相关的文章
+
+mistral ai:
+  label: mistral ai
+  permalink: /mistral ai
+  description: 与 mistral ai 主题相关的文章
+
+continue:
+  label: continue
+  permalink: /continue
+  description: 与该主题相关的文章继续

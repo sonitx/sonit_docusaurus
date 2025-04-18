@@ -27,3 +27,28 @@ golang:
   label: Golang
   permalink: /golang
   description: Các bài viết liên quan đến chủ đề Golang
+
+vscode:
+  label: vscode
+  permalink: /vscode
+  description: Các bài viết liên quan đến chủ đề vscode
+
+copilot:
+  label: copilot
+  permalink: /copilot
+  description: Các bài viết liên quan đến chủ đề copilot
+
+intellij:
+  label: intellij
+  permalink: /intellij
+  description: Các bài viết liên quan đến chủ đề intellij
+
+mistral ai:
+  label: mistral ai
+  permalink: /mistral ai
+  description: Các bài viết liên quan đến chủ đề mistral ai
+
+continue:
+  label: continue
+  permalink: /continue
+  description: Các bài viết liên quan đến chủ đề continue

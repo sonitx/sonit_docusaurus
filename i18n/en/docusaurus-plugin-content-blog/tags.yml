@@ -1,7 +1,7 @@
 sonit.me:
   label: SonIT.me
   permalink: /sonit
-  description: Những bài viết liên quan đến website của chúng tôi.
+  description: Articles related to our website.
 
 apache_superset:
   label: Apache Superset
@@ -17,3 +17,38 @@ llm:
   label: Large Language Model (LLM)
   permalink: /large-language-model
   description: Blogs about Large Language Model (LLM)
+
+ollama:
+  label: Ollama
+  permalink: /ollama
+  description: Articles related to Ollama
+
+golang:
+  label: Golang
+  permalink: /golang
+  description: Articles related to Golang
+
+vscode:
+  label: vscode
+  permalink: /vscode
+  description: Posts related to vscode
+
+copilot:
+  label: copilot
+  permalink: /copilot
+  description: Posts related to copilot
+
+intellij:
+  label: intellij
+  permalink: /intellij
+  description: Posts related to intellij
+
+mistral ai:
+  label: mistral ai
+  permalink: /mistral ai
+  description: Posts related to mistral ai
+
+continue:
+  label: continue
+  permalink: /continue
+  description: Posts related to continue
