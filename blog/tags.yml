@@ -52,3 +52,8 @@ continue:
   label: continue
   permalink: /continue
   description: Các bài viết liên quan đến chủ đề continue
+
+n8n:
+  label: n8n
+  permalink: /n8n
+  description: Các bài viết liên quan đến chủ đề n8n
