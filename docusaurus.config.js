@@ -53,8 +53,8 @@ const config = {
       '@docusaurus/plugin-google-tag-manager',
       {
         containerId: 'GTM-PBLB5W9L',
-      },
-    ],
+      }
+    ]
   ],
 
   presets: [
@@ -91,6 +91,22 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        pages: {
+          path: 'src/pages',
+          routeBasePath: '',
+          include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
+          exclude: [
+            '**/_*.{js,jsx,ts,tsx,md,mdx}',
+            '**/_*/**',
+            '**/*.test.{js,jsx,ts,tsx}',
+            '**/__tests__/**',
+          ],
+          mdxPageComponent: '@theme/MDXPage',
+          remarkPlugins: [],
+          rehypePlugins: [],
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
+        }
       }),
     ],
   ],
@@ -115,13 +131,21 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'tutorialSidebar',
-          //   position: 'left',
-          //   label: 'Tutorial',
-          // },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'dropdown',
+            position: 'right',
+            label: 'Learning English',
+            items: [
+              {
+                label: 'Listening',
+                to: '/english/listening',
+              },
+              {
+                label: 'Speaking',
+                to: '/english/speaking',
+              },
+            ]
+          },
           {
             type: 'localeDropdown',
             position: 'right'
