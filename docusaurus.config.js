@@ -113,10 +113,23 @@ const config = {
 
   scripts: [
     {
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3096568446897991',
+      src: 'https://cmp.gatekeeperconsent.com/min.js',
+      async: false,
+      crossorigin: 'anonymous',
+    },
+    {
+      src: 'https://the.gatekeeperconsent.com/cmp.min.js',
+      async: false,
+      crossorigin: 'anonymous',
+    },
+    {
+      src: 'https://www.ezojs.com/ezoic/sa.min.js',
       async: true,
       crossorigin: 'anonymous',
     },
+    {
+      src: 'data:text/javascript;base64,window.ezstandalone = window.ezstandalone || {};ezstandalone.cmd = ezstandalone.cmd || [];'
+    }
   ],
 
   themeConfig:
