@@ -1,6 +1,6 @@
 ---
 slug: 2025-07-24-apache-kafka-architecture-and-principle
-title: Apache Kafka: Architecture, Principle, Question and Answer
+title: Tìm hiểu về kiến trúc và nguyên lý hoạt động của Apache Kafka
 authors: [sonit]
 tags: [architect]
 ---
