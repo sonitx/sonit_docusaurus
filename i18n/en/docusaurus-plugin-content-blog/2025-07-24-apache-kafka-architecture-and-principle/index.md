@@ -7,6 +7,8 @@ tags: [architect]
 
 Kafka is described as a “distributed commit log” – a distributed system that stores an ordered stream of events, is replayable, and is highly fault-tolerant.
 
+<!-- truncate -->
+
 ## 1. Overview of the architecture
 
 ![Screenshot 2025-07-24 at 21.52.42.png](./img/kafka-architecture.png)

@@ -7,6 +7,8 @@ tags: [architect]
 
 Kafka được mô tả là “distributed commit log” – một hệ thống phân tán lưu trữ luồng sự kiện theo thứ tự, có khả năng phát lại và chịu lỗi cao .
 
+<!-- truncate -->
+
 ## 1. Kiến trúc tổng quan
 
 ![Screenshot 2025-07-24 at 21.52.42.png](./img/kafka-architecture.png)

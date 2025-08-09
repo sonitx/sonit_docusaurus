@@ -2,9 +2,9 @@ import React from 'react';
 import Layout from '@theme/Layout';
 
 export default function Hello() {
-  const search = window.location.search;
-  const params = new URLSearchParams(search);
-  const lessionId = params.get('lesson');
+  // const search = window.location.search;
+  // const params = new URLSearchParams(search);
+  // const lessionId = params.get('lesson');
 
   return (
     <Layout title="Hello" description="Hello React Page">

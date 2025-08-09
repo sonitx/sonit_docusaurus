@@ -7,6 +7,8 @@ tags: [architect]
 
 Kafka 被描述为“分布式提交日志”——一个存储有序事件流、可重放且高度容错的分布式系统。
 
+<!-- truncate -->
+
 ## 1. 架构概述
 
 ![2025-07-24 21:52:42 截图.png](./img/kafka-architecture.png)
