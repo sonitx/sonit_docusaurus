@@ -145,18 +145,14 @@ const config = {
         },
         items: [
           {
-            type: 'dropdown',
+            type: 'localeDropdown',
             position: 'right',
-            label: 'Learning English',
+            label: 'Applications',
             items: [
               {
-                label: 'Listening',
-                to: '/english/listening',
-              },
-              {
-                label: 'Speaking',
-                to: '/english/speaking',
-              },
+                label: 'Dev Toolbox',
+                to: '/app/dev-toolbox',
+              }
             ]
           },
           {
