@@ -15,6 +15,8 @@ tags: [sonit.me]
 
 Tất cả công cụ đều hoạt động **trực tiếp trên trình duyệt**, hoàn toàn **miễn phí** và **không yêu cầu đăng nhập**.  
 
+<!-- truncate -->
+
 ---
 
 ## 🧰 Các công cụ nổi bật trên Dev Toolbox

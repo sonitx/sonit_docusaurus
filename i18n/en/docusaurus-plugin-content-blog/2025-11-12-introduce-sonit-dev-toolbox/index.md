@@ -16,6 +16,8 @@ It helps you **save time**, **boost productivity**, and **solve common developme
 
 All tools run **directly in your browser**, are **completely free**, and **require no login**.  
 
+<!-- truncate -->
+
 ---
 
 ## 🧰 Highlighted Tools in Dev Toolbox
