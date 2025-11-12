@@ -145,7 +145,7 @@ const config = {
         },
         items: [
           {
-            type: 'localeDropdown',
+            type: 'dropdown',
             position: 'right',
             label: 'Applications',
             items: [

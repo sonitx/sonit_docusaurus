@@ -22,6 +22,8 @@ All tools run **directly in your browser**, are **completely free**, and **requi
 
 ## 🧰 Highlighted Tools in Dev Toolbox
 
+![sonit.me_dev_toolbox.png](./img/sonit.me_dev_toolbox.png)
+
 Dev Toolbox provides a wide range of useful utilities for **frontend, backend, devops, and data developers**, including:
 
 ### 🔹 **1. Code Formatter & Converter**

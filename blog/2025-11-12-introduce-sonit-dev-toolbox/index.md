@@ -21,6 +21,8 @@ Tất cả công cụ đều hoạt động **trực tiếp trên trình duyệt
 
 ## 🧰 Các công cụ nổi bật trên Dev Toolbox
 
+![sonit.me_dev_toolbox.png](./img/sonit.me_dev_toolbox.png)
+
 Dev Toolbox hiện cung cấp nhiều tiện ích hữu ích cho developer trong các mảng **frontend, backend, devops và data**, bao gồm:
 
 ### 🔹 **1. Code Formatter & Converter**
