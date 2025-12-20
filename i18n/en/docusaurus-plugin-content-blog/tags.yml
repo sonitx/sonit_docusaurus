@@ -73,11 +73,6 @@ open-source:
   permalink: /open-source
   description: Articles related to open-source
 
-Copilot:
-  label: Copilot
-  permalink: /copilot
-  description: Articles related to Copilot
-
 vLLM:
   label: vLLM
   permalink: /vllm

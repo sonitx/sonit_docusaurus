@@ -1,23 +1,26 @@
 ---
-title: Sim Studio: Build AI Agent Workflows in Minutes
-description: Learn how Sim Studio helps developers and teams design, deploy, and manage AI agent workflows visually with Copilot, vector databases, and self-hosted AI models like Ollama and vLLM.
-author: [sonit]
-date: 2025-12-20
-updated: 2025-12-20
+
+title: "Sim Studio: Build AI Agent Workflows in Minutes"
+description: "Learn how Sim Studio helps developers and teams design, deploy, and manage AI agent workflows visually with Copilot, vector databases, and self-hosted AI models like Ollama and vLLM."
+author: "sonit"
+date: "2025-12-20"
+updated: "2025-12-20"
 tags: ["AI workflows","Next.js","open-source","Copilot","Ollama","vLLM","pgvector"]
-slug: sim-studio-ai-agent-workflows
-canonical_url: https://sonit.me/sim-studio-ai-agent-workflows
-og_title: Sim Studio: Build AI Agent Workflows in Minutes
-og_description: Discover Sim Studio—an open-source platform for building AI agent workflows visually, integrating Copilot, vector databases, and local AI models.
-og_image: https://sim.ai/assets/og-image.jpg
-twitter_card: summary_large_image
-twitter_title: Sim Studio: Build AI Agent Workflows in Minutes
-twitter_description: Design and deploy AI workflows visually with Sim Studio. Supports Copilot, vector databases, and self-hosted AI models.
+slug: "sim-studio-ai-agent-workflows"
+canonical_url: "https://sonit.me/sim-studio-ai-agent-workflows"
+og_title: "Sim Studio: Build AI Agent Workflows in Minutes"
+og_description: "Discover Sim Studio—an open-source platform for building AI agent workflows visually, integrating Copilot, vector databases, and local AI models."
+og_image: "https://sim.ai/assets/og-image.jpg"
+twitter_card: "summary_large_image"
+twitter_title: "Sim Studio: Build AI Agent Workflows in Minutes"
+twitter_description: "Design and deploy AI workflows visually with Sim Studio. Supports Copilot, vector databases, and self-hosted AI models."
 ---
 
 # Sim Studio: Build AI Agent Workflows in Minutes
 
 > **TL;DR:** Sim Studio is an open-source platform that lets you design, deploy, and manage AI agent workflows visually. With built-in support for Copilot, vector databases, and self-hosted AI models like Ollama and vLLM, Sim empowers developers and teams to create intelligent automation without complex coding.
+
+<!-- truncate -->
 
 ---
 
@@ -190,29 +193,3 @@ Community recipes exist; official docs are coming soon.
 - [vLLM](https://docs.vllm.ai)
 
 ---
-
-## JSON-LD Schema
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Sim Studio: Build AI Agent Workflows in Minutes",
-  "description": "Learn how Sim Studio helps developers and teams design, deploy, and manage AI agent workflows visually with Copilot, vector databases, and self-hosted AI models like Ollama and vLLM.",
-  "author": {
-    "@type": "Person",
-    "name": "SonIT"
-  },
-  "datePublished": "2025-12-20",
-  "dateModified": "2025-12-20",
-  "image": "https://sim.ai/assets/og-image.jpg",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Sim Studio",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://sim.ai/assets/logo.png"
-    }
-  }
-}
-</script>

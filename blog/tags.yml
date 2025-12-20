@@ -77,12 +77,7 @@ open-source:
   label: open-source
   permalink: /open-source
   description: Các bài viết liên quan đến chủ đề open-source
-
-Copilot:
-  label: Copilot
-  permalink: /copilot
-  description: Các bài viết liên quan đến chủ đề Copilot
-
+  
 vLLM:
   label: vLLM
   permalink: /vllm

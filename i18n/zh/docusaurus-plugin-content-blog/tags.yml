@@ -68,11 +68,6 @@ open-source:
   permalink: /open-source
   description: 与 open-source 相关的文章
 
-Copilot:
-  label: Copilot
-  permalink: /copilot
-  description: 与 Copilot 相关的文章
-
 vLLM:
   label: vLLM
   permalink: /vllm
