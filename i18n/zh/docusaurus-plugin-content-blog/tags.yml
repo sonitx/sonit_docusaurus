@@ -52,3 +52,33 @@ continue:
   label: continue
   permalink: /continue
   description: 与该主题相关的文章继续
+
+AI workflows:
+  label: AI workflows
+  permalink: /ai-workflows
+  description: 与 AI workflows 相关的文章
+
+Next.js:
+  label: Next.js
+  permalink: /nextjs
+  description: 与 Next.js 相关的文章
+
+open-source:
+  label: open-source
+  permalink: /open-source
+  description: 与 open-source 相关的文章
+
+Copilot:
+  label: Copilot
+  permalink: /copilot
+  description: 与 Copilot 相关的文章
+
+vLLM:
+  label: vLLM
+  permalink: /vllm
+  description: 与 vLLM 相关的文章
+
+pgvector:
+  label: pgvector
+  permalink: /pgvector
+  description: 与 pgvector 相关的文章

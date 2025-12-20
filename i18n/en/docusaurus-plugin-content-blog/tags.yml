@@ -57,3 +57,33 @@ n8n:
   label: n8n
   permalink: /n8n
   description: Posts related to n8n
+
+AI workflows:
+  label: AI workflows
+  permalink: /ai-workflows
+  description: Articles related to AI workflows
+
+Next.js:
+  label: Next.js
+  permalink: /nextjs
+  description: Articles related to Next.js
+
+open-source:
+  label: open-source
+  permalink: /open-source
+  description: Articles related to open-source
+
+Copilot:
+  label: Copilot
+  permalink: /copilot
+  description: Articles related to Copilot
+
+vLLM:
+  label: vLLM
+  permalink: /vllm
+  description: Articles related to vLLM
+
+pgvector:
+  label: pgvector
+  permalink: /pgvector
+  description: Articles related to pgvector

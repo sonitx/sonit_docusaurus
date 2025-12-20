@@ -18,7 +18,7 @@ llm:
   permalink: /large-language-model
   description: Các bài viết hướng dẫn về mô hình ngôn ngữ lớn, LLM
 
-ollama:
+Ollama:
   label: Ollama
   permalink: /ollama
   description: Các bài viết liên quan đến chủ đề Ollama
@@ -62,3 +62,34 @@ architect:
   label: Technical Architect
   permalink: /architect
   description: Các bài viết liên quan đến chủ đề Technical Architect
+
+AI workflows:
+  label: AI workflows
+  permalink: /ai-workflows
+  description: Các bài viết liên quan đến chủ đề AI workflows
+
+Next.js:
+  label: Next.js
+  permalink: /nextjs
+  description: Các bài viết liên quan đến chủ đề Next.js
+
+open-source:
+  label: open-source
+  permalink: /open-source
+  description: Các bài viết liên quan đến chủ đề open-source
+
+Copilot:
+  label: Copilot
+  permalink: /copilot
+  description: Các bài viết liên quan đến chủ đề Copilot
+
+vLLM:
+  label: vLLM
+  permalink: /vllm
+  description: Các bài viết liên quan đến chủ đề vLLM
+
+pgvector:
+  label: pgvector
+  permalink: /pgvector
+  description: Các bài viết liên quan đến chủ đề pgvector
+

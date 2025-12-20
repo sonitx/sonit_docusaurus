@@ -151,7 +151,7 @@ const config = {
             items: [
               {
                 label: 'Dev Toolbox',
-                to: '/app/dev-toolbox',
+                href: 'https://sonit.me/app/dev-toolbox/',
               }
             ]
           },
